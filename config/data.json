@@ -1,0 +1,15 @@
+
+
+[
+  { "id": 1, "name": "Alice Johnson", "email": "alice@example.com", "age": 25, "city": "New York" },
+  { "id": 2, "name": "Bob Martinez", "email": "bob@example.com", "age": 30, "city": "Los Angeles" },
+  { "id": 3, "name": "Carla Smith", "email": "carla@example.com", "age": 28, "city": "Chicago" },
+  { "id": 4, "name": "David Lee", "email": "david@example.com", "age": 22, "city": "Miami" },
+  { "id": 5, "name": "Emma Brown", "email": "emma@example.com", "age": 27, "city": "Dallas" }
+
+]
+
+  
+
+ 
+  

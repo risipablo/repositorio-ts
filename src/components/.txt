@@ -1,0 +1,45 @@
+    const [user,setUser] = useState<IUsers[]>([])
+    const [loading,setLoading] = useState(false)
+    const [error,setError] = useState<string | null>(null)
+
+    const fetchUser = (): Promise<IUsers[]> => {
+        setLoading(true)
+        setError(null)
+
+        return new Promise<IUsers[]>((resolve) => {
+            const userData = userAPi as IUsers[]
+            setUser(userData)
+            setLoading(false)
+            resolve(userData)
+        })
+    }
+    console.log(setUser)
+
+    return{user,loading, error, fetchUser}
+
+     useEffect(() => {
+        if (!dataLoaded) {
+            fetchUser()
+                .then(data => {
+                    console.log("Datos cargados:", data)
+                    setDataLoaded(true)
+                })
+                .catch(err => console.error("Error:", err))
+        }
+    }, [dataLoaded])
+
+    if (loading) return <div>Cargando usuarios...</div>
+    if (error) return <div>Error: {error}</div>
+
+
+            <div>
+            <h1>API Local User</h1>
+            {user.map(use => (
+                <ul key={use.id}>
+                    <li>{use.name}</li>
+                    <li>{use.email}</li>
+                    <li>{use.age}</li>
+                    <li>{use.city}</li>
+                </ul>
+            ))}
+        </div>
