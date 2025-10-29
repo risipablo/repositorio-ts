@@ -3,10 +3,13 @@
 
 import { Calculator } from "./components/Calculator & Count/CalculatorNumber"
 import { Counter } from "./components/Calculator & Count/Counter"
+import { Numbers } from "./components/Exercise/Numbers"
 import { TODOLIST } from "./components/Todo/ToDoList"
 import { DataLocal } from "./components/User/UserApi"
 import { Banco } from "./pages/Banco"
-// import { UserPage } from "./pages/UserPage"
+import { InventarioPage } from "./pages/InventarioPage"
+
+
 
 
 function App() {
@@ -16,10 +19,11 @@ function App() {
     <>
       <Counter/>
       <Calculator/>
+      <Numbers/>
       <TODOLIST/>
       <DataLocal/>
-      {/* <UserPage/> */}
       <Banco/>
+      <InventarioPage/>
     </>
   )
 }

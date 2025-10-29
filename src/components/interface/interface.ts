@@ -32,3 +32,26 @@ export interface IClient{
   print?(): string
 }
 
+
+export interface IProductoIventario{
+  id?:number,
+  nombre:string,
+  precio: number,
+  stock: number,
+  categoria: 'electronica' | 'ropa' | 'hogar' | 'deportes'
+}
+
+
+export interface ICarritoItem{
+  producto: IProductoIventario;
+  cantidad: number;
+}
+
+
+
+
+export interface ICarrito{
+  items: ICarritoItem[]
+  total: number
+  cantidadTotal: number
+}
